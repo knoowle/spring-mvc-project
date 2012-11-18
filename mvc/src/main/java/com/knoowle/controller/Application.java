@@ -7,6 +7,7 @@ import java.util.Date;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class Application {
@@ -27,5 +28,11 @@ public class Application {
 		model.addAttribute("addtime", format.format(new Date()));
 		
 		return "application/addblog";
+	}
+	
+	@RequestMapping(value="/register", method=RequestMethod.GET)
+	public String register(Model model) {
+		model.addAttribute("title", "mvc project register");
+		return "application/register";
 	}
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.knoowle.model">
+	<class name="Blog">
+		<id name="id" column="blog_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="title" column="blog_title"/>
+		<property name="content" column="blog_content"/>
+		<property name="addDate" column="blog_add_date"  type="java.util.Date"/>
+		<many-to-one name="author" column="blog_author_id"/>
+	</class>
+</hibernate-mapping>
