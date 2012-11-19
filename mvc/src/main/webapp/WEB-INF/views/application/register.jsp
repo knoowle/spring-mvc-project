@@ -12,9 +12,13 @@
 <body>
 <h1>knoowle</h1>
 <p>register</p>
-<spring:url value="/register" var="register_post_url"/>
-<form action="${reister_post_url}" method="post">
-
+<spring:url value="/register1" var="register_post_url"/>
+<form action="${register_post_url}" method="post">
+<p><label>name</label><input name="name"/></p>
+<p><label>email</label><input name="email"/></p>
+<p><label>password</label><input name="password" type="password"/></p>
+<p><label>repassword</label><input name="repassword" type="password"/></p>
+<p><input type="submit"/></p>
 </form>
 </body>
 </html>
