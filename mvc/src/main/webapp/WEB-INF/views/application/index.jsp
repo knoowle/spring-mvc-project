@@ -7,12 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>${title}</title>
 <spring:url value="/css/main.css" var="main_css_url"/>
+<spring:url value="/addblog/" var="addblog"/>
+<spring:url value="/register/" var="register"/>
 <link href="${main_css_url}" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <h1>${logo}</h1>
 <p>add blog</p>
-<spring:url value="/addblog/" var="addblog"/>
+
 <form action="${addblog}">
 	<p><label>title</label><input name="title" /></p>
 	<p><label>content</label>
@@ -20,8 +22,6 @@
 	</p>
 	<p><input type="submit" /></p>
 </form>
-
-
-
+<a href="${register}">register</a>
 </body>
 </html>
